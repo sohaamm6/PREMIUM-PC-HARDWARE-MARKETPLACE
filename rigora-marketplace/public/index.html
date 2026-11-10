@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0d12">
+  <title>Rigora — Build Better. Game Harder.</title>
+  <meta name="description" content="Discover new and pre-owned PC hardware on Rigora.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">
+    <span class="spark">✦</span>
+    YOUR NEXT BUILD STARTS HERE
+    <span class="announce-muted">· Premium parts. Smarter prices.</span>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Rigora home">
+      <span class="brand-mark">R</span>
+      <span>rigora<span class="brand-dot">.</span></span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#home" data-nav="home">Home</a>
+      <a href="#new-parts" data-nav="new-parts">New parts</a>
+      <a href="#used-parts" data-nav="used-parts">Pre-owned</a>
+      <a href="#pc-builder" data-nav="pc-builder">PC builder</a>
+    </nav>
+
+    <form class="header-search" id="search-form">
+      <span class="search-icon">⌕</span>
+      <input id="global-search" placeholder="Search GPUs, CPUs, memory..." aria-label="Search products">
+      <kbd>↵</kbd>
+    </form>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="wishlist-shortcut" title="Wishlist" aria-label="Wishlist">
+        ♡ <span class="action-label">Saved</span>
+      </button>
+      <a class="icon-btn cart-shortcut" href="#cart" aria-label="Cart">
+        ♧ <span class="action-label">Cart</span>
+        <span class="count" id="cart-count">0</span>
+      </a>
+      <button class="avatar-btn" id="account-shortcut" title="Account">JD</button>
+    </div>
+  </header>
+
+  <div class="mobile-search">
+    <form id="mobile-search-form">
+      <input id="mobile-search-input" placeholder="Search PC parts..." aria-label="Search products">
+      <button aria-label="Search">⌕</button>
+    </form>
+  </div>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a class="brand" href="#home">
+          <span class="brand-mark">R</span>
+          <span>rigora<span class="brand-dot">.</span></span>
+        </a>
+        <p>The hardware marketplace for people who care about every frame, every spec, and every rupee.</p>
+        <div class="footer-social">
+          <span>Discord ↗</span>
+          <span>Instagram ↗</span>
+          <span>YouTube ↗</span>
+        </div>
+      </div>
+
+      <div>
+        <h4>Marketplace</h4>
+        <a href="#new-parts">Shop new parts</a>
+        <a href="#used-parts">Pre-owned deals</a>
+        <a href="#sell">Sell a component</a>
+        <a href="#pc-builder">PC builder</a>
+      </div>
+
+      <div>
+        <h4>Support</h4>
+        <a href="#help">Help centre</a>
+        <a href="#shipping">Shipping &amp; returns</a>
+        <a href="#safety">Buyer safety</a>
+        <a href="#contact">Contact us</a>
+      </div>
+
+      <div>
+        <h4>Stay in the loop</h4>
+        <p class="footer-small">Get the latest drops and genuinely good deals.</p>
+        <form id="newsletter-form" class="newsletter">
+          <input type="email" required placeholder="you@example.com" aria-label="Email address">
+          <button aria-label="Subscribe">→</button>
+        </form>
+        <span class="footer-small" id="newsletter-message">No spam. Just good hardware.</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Rigora Marketplace · Demo project</span>
+      <div>
+        <a href="#privacy">Privacy</a>
+        <a href="#terms">Terms</a>
+        <span class="status-dot"></span>
+        <span>Demo environment</span>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast-region" class="toast-region" aria-live="polite"></div>
+
+  <script src="product-data.js"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
